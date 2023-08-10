@@ -19,7 +19,6 @@ const MessagingApp = () => {
     const [isEditing, setIsEditing] = useState(false);
   return (
     <div className="app__wrapper">
-        
         <Chat client={client} theme="team light">
             <Channellistcontainer 
                 isCreating={isCreating}

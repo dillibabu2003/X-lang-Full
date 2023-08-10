@@ -11,6 +11,7 @@ import {Auth } from '../msg_components';
 import NavBar from '../NavBar/NavBar';
 import MainPage from '../MainPage/MainPage';
 import ChatBot from '../ChatBot/ChatBot';
+import MaybeShowNavBar from '../MaybeShowNavBar/MaybeShowNavBar';
 
 const cookies = new Cookies();
 
@@ -35,8 +36,12 @@ const LoginPage = () => {
     if(!authToken) return <Auth />
     console.log(authToken);
     return (
-        <div>
-            <NavBar/>
+        <>
+           
+            <MaybeShowNavBar>
+               <NavBar/>
+            </MaybeShowNavBar>
+            {/* <div onClick={}>LogOut</div> */}
             <Routes>
                 <Route path="/chatbot" element={<ChatBot/>}/>
                 <Route path="/" element={<MainPage/>}/>
@@ -44,7 +49,7 @@ const LoginPage = () => {
                 <Route path="/home" element={<MainPage/>}/>
             </Routes>
         
-        </div>
+        </>
     );
 }
 
