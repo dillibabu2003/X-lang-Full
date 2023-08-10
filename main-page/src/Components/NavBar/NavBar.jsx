@@ -1,9 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router';
+import { redirect } from "react-router-dom";
 import './NavBar.css'
+
 
 const NavBar = () => {
     const navigate=useNavigate('');
+    
     const openChatBot=()=>{
       return (
            navigate('/chatbot')
