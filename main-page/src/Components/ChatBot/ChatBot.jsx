@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './ChatBot.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
-const API_KEY = "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"
+const API_KEY = "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"
 const systemMessage = { 
   "role": "system", "content": "Explain things like you're talking to a 10 years old small boy."
 }
@@ -95,4 +95,4 @@ function ChatBot() {
   )
 }
 
-export default ChatBot
+export default ChatBot;
