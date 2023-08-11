@@ -1,9 +1,9 @@
 
 import { StreamChat } from 'stream-chat';
-import Cookies from 'universal-cookie';
+
 import { Router,Routes,Route } from 'react-router';
 
-
+import Cookies from 'universal-cookie';
 import 'stream-chat-react/dist/css/index.css';
 import './LoginPage.css';
 import MessagingApp from '../MessagingApp/MessagingApp';
@@ -12,6 +12,8 @@ import NavBar from '../NavBar/NavBar';
 import MainPage from '../MainPage/MainPage';
 import ChatBot from '../ChatBot/ChatBot';
 import MaybeShowNavBar from '../MaybeShowNavBar/MaybeShowNavBar';
+import LogoutIcon from '../../assets/logout.png'
+import MaybeShowLogout from '../MaybeShowLogout/MaybeShowLogout';
 
 const cookies = new Cookies();
 
@@ -32,16 +34,21 @@ if(authToken) {
 }
 
 
+
+
 const LoginPage = () => {
     if(!authToken) return <Auth />
     console.log(authToken);
+    
     return (
         <>
-           
             <MaybeShowNavBar>
                <NavBar/>
             </MaybeShowNavBar>
-            {/* <div onClick={}>LogOut</div> */}
+            {/* <MaybeShowLogout>
+               
+            </MaybeShowLogout> */}
+         
             <Routes>
                 <Route path="/chatbot" element={<ChatBot/>}/>
                 <Route path="/" element={<MainPage/>}/>

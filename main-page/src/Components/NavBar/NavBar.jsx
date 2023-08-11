@@ -2,10 +2,14 @@ import React from 'react'
 import { useNavigate } from 'react-router';
 import { redirect } from "react-router-dom";
 import './NavBar.css'
+import Cookies from 'universal-cookie';
+import LogoutIcon from '../../assets/logout.png'
 
 
 const NavBar = () => {
     const navigate=useNavigate('');
+
+    const cookies = new Cookies();
     
     const openChatBot=()=>{
       return (
@@ -28,6 +32,26 @@ const NavBar = () => {
       this.classList.add('active');
     }
     list.forEach((item)=>item.addEventListener('click',activeLink));
+
+    const logout = () => {
+      cookies.remove("token");
+      cookies.remove('userId');
+      cookies.remove('username');
+      cookies.remove('fullName');
+      cookies.remove('avatarURL');
+      cookies.remove('hashedPassword');
+      cookies.remove('phoneNumber');
+  
+      window.location.reload();
+  }
+  const SideBar = ({ logout }) => (
+  
+     <div className="channel-list__sidebar__icon2">
+       <div className="icon1__inner" onClick={logout}>
+           <img src={LogoutIcon} alt="Logout" width="30" />
+       </div>
+     </div>
+);
 
 
   return (
@@ -66,6 +90,9 @@ const NavBar = () => {
             </li>
             <div className="indicator"></div>
         </ul>
+        <div>
+                 <SideBar logout={logout} />
+        </div>
       </div>
       
     </div> 
