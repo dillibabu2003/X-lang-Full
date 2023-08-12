@@ -2,17 +2,19 @@ import React,{useState,useEffect} from 'react'
 import './MainPage.css'
 import ReactPlayer from 'react-player/youtube'
 import getYouTubeID from 'get-youtube-id';
+import { useNavigate } from 'react-router';
 
 
 
 const MainPage = () => {
     const [inputtext,setInputtext]=useState("NOTHING");
     const [inputselect,setInputSelect]=useState("tamil");
+    const navigate=useNavigate();
 
    
     const [d,setData] = useState([{}])
     useEffect(()=>{
-      fetch(inputselect+"/"+inputtext).then(
+      fetch("lang/"+inputselect+"/"+inputtext).then(
           res=>res.json()
       ).then(
           d =>{ 
@@ -26,7 +28,7 @@ const MainPage = () => {
     }
   
     const callApi=(e)=>{
-      fetch(e.inputselect+"/"+e.inputtext).then(
+      fetch("lang/"+e.inputselect+"/"+e.inputtext).then(
           res=>res.json()
       ).then(
           d =>{ 
@@ -58,6 +60,15 @@ const MainPage = () => {
         else{
           setErrorMsg("Invalid Youtube URL");
         }
+    }
+    const openFindJobs=()=>{
+            navigate('/findjobs');
+    }
+    const openFindFriends=()=>{
+           navigate('/findfriends');
+    }
+    const openFindCourse=()=>{
+          navigate('/findcourse')
     }
   
     return (
@@ -104,9 +115,9 @@ const MainPage = () => {
         </div>
       </div>
       <div className="option-button">
-          <div className="find-options">Find Job</div>
-          <div className="find-options">Find friends</div>
-          <div className="find-options">Find course</div>
+          <div className="find-options" onClick={openFindJobs}>Find Job</div>
+          <div className="find-options" onClick={openFindFriends}>Find friends</div>
+          <div className="find-options" onClick={openFindCourse}>Find course</div>
      </div>
     </>
     )
