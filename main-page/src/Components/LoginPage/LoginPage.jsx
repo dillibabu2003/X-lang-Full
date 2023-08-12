@@ -12,8 +12,11 @@ import NavBar from '../NavBar/NavBar';
 import MainPage from '../MainPage/MainPage';
 import ChatBot from '../ChatBot/ChatBot';
 import MaybeShowNavBar from '../MaybeShowNavBar/MaybeShowNavBar';
-import LogoutIcon from '../../assets/logout.png'
-import MaybeShowLogout from '../MaybeShowLogout/MaybeShowLogout';
+// import LogoutIcon from '../../assets/logout.png'
+// import MaybeShowLogout from '../MaybeShowLogout/MaybeShowLogout';
+import Findjobs from '../FindJobs/Findjobs';
+import FindFriends from '../FindFriends/FindFriends';
+import FindCourse from '../FindCourse/FindCourse';
 
 const cookies = new Cookies();
 
@@ -45,19 +48,16 @@ const LoginPage = () => {
             <MaybeShowNavBar>
                <NavBar/>
             </MaybeShowNavBar>
-            {/* <MaybeShowLogout>
-               
-            </MaybeShowLogout> */}
-         
             <Routes>
                 <Route path="/chatbot" element={<ChatBot/>}/>
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/messaging" element={<MessagingApp/>}/>
                 <Route path="/home" element={<MainPage/>}/>
+                <Route path="/findjobs" element={<Findjobs/>}/>
+                <Route path="/findfriends" element={<FindFriends/>}/>
+                <Route path="/findcourse" element={<FindCourse/>}/>
             </Routes>
-        
         </>
     );
 }
-
 export default LoginPage;
