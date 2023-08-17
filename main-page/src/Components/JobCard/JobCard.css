@@ -1,0 +1,24 @@
+.company-card{
+    width: 800px;
+    height: 150px;
+    margin: 30px;
+    background: #D9D9D9;
+    border-radius: 30px;
+}
+.name-and-location{
+    display: flex;
+    justify-content: space-around;
+    font-size: x-large;
+}
+.main-details{
+    margin: 15px;
+
+}
+.other-details{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.info{
+    width: 300px;
+}

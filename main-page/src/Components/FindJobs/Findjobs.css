@@ -1,8 +1,9 @@
 .quotes-and-picture{
     height: 700px;
     width: 400px;
-    background-color: #D9D9D9;
+    background-color: #f7f7f7;
     margin: 50px;
+   border-radius: 30px;
 
 }
 .pannel-and-list{
@@ -11,13 +12,35 @@
 
 /* MAKE AN EXPERIENCE BY EXPLORING */
 .quotes{
-    position: absolute;
     font-family: 'Inter';
-  
     font-weight: bolder;
     font-size: 40px;
     color: #000000;
     margin:30px;
 }
+.jobs-list{
+    overflow: scroll;
+    height: 700px;
+    overflow-x: hidden;
+    margin-top: 50px;
+}
 
+.jobs-list::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .jobs-list::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+  }
+  .jobs-list::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+  .jobs-list::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+  }
+  .jobs-list::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+  }
 

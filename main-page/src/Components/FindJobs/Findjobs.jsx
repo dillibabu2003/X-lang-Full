@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import './Findjobs.css'
-import './jobs.png'
+import './jobs.jpeg'
+import JobCard from '../JobCard/JobCard'
 
 const Findjobs = () => {
   const [d,setData] = useState([{}])
@@ -32,9 +33,9 @@ const Findjobs = () => {
         <div className='pannel-and-list'>
           <div className='quotes-and-picture'>
             <div className='quotes'>MAKE<br/>&nbsp; AN <br/>&nbsp; &nbsp;  EXPERIENCE<br/> &nbsp; &nbsp; &nbsp;&nbsp; BY<br/>&nbsp; &nbsp; &nbsp; &nbsp;  EXPLORING</div>
-            <img src="jobs.png" alt='error'></img>
+            <div className='job-image'><img src={require('./jobs.jpeg')}  style={{width:'400px',height:'400px',borderBottomRightRadius:'20px',WebkitBorderBottomLeftRadius:'20px'}}></img></div>
           </div>
-          <div>
+          <div className='jobs-list'>
           {
               (typeof d.JOBS === 'undefined')?(
               <p>Loading....</p>
@@ -42,7 +43,7 @@ const Findjobs = () => {
               :
               (d.JOBS.map((JOB,i)=>(
                         JOB.map((val,j)=>(
-                          <div>{val}</div>
+                          <JobCard companyDetails={val}/>
                         )
               ))))
             
