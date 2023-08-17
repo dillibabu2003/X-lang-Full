@@ -117,6 +117,31 @@ def friends(dropbar):
         "Friends" : friends_finder(Value)
     }
 
+
+
+@app.route("/job/<dropbar>")
+def job(dropbar):
+    if(dropbar != 'Default'):
+        return {
+            "JOBS" : [(jobs_finder(dropbar))]
+        }
+    with open('Domain.txt', 'r') as f:
+        Value = f.read()
+    if(Value == ""):
+        return {
+            "Jobs" : [str("NOTHING TO SHOW")]
+        }
+    return {
+        "Jobs" : [(jobs_finder(Value))],
+    }
+def jobs_finder(Domain):
+	jobsconn = sqlite3.connect('Jobs.db')
+	jobscursor = jobsconn.cursor()
+	jobs = view_all_users(jobscursor,Domain)
+	return jobs
+
+
+
 df.dropna(inplace =True)
 df['category_id'] = df['Cluster'].factorize()[0]
 category_id_df = df[['Cluster', 'category_id']].drop_duplicates()

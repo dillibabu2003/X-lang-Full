@@ -6,12 +6,12 @@ import { useNavigate } from 'react-router';
 
 
 
+
 const MainPage = () => {
     const [inputtext,setInputtext]=useState("NOTHING");
     const [inputselect,setInputSelect]=useState("tamil");
     const navigate=useNavigate();
-
-   
+    
     const [d,setData] = useState([{}])
     useEffect(()=>{
       fetch("lang/"+inputselect+"/"+inputtext).then(

@@ -17,6 +17,7 @@ import MaybeShowNavBar from '../MaybeShowNavBar/MaybeShowNavBar';
 import Findjobs from '../FindJobs/Findjobs';
 import FindFriends from '../FindFriends/FindFriends';
 import FindCourse from '../FindCourse/FindCourse';
+import './bg.png'
 
 const cookies = new Cookies();
 

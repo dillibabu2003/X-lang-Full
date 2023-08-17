@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
+import FriendsCard from '../FriendsCard/FriendsCard';
 
 const FindFriends = () => {
-    const [d,setData] = useState([{}])
-   
+    const [d,setData] = useState([{}]);
+    let val=0; 
     const [inputselect,setInputSelect]=useState("Default");
     useEffect(()=>{
       fetch("frnd/"+inputselect).then(
@@ -29,16 +30,17 @@ const FindFriends = () => {
             <option value="Biology">Biology</option>
             <option value="Economics">Economics</option>
           </select>
-    <div>
+    <div className='friends-list'>
     {
         (typeof d.Friends === 'undefined')?(
         <p>Loading....</p>
         ) 
         :
-        (d.Friends.map((Friend,i)=>(
-                <div key={i}>{Friend.USER} &nbsp;{Friend.SKILLSETS}</div>
-        )))
-       
+        (d.Friends.map((Friend,i)=>{
+          val+=1;
+          return <FriendsCard  val={val} name={Friend.USER} skills={Friend.SKILLSETS}/> 
+       }))
+      
       }
     </div>
     </>

@@ -18,7 +18,7 @@ const NavBar = () => {
     }
     const gotoHome=()=>{
         return(
-            navigate('/home')
+            navigate('/')
         )
     }
     const openMessagingApp=()=>{

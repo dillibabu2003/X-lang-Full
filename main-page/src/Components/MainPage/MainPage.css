@@ -1,7 +1,9 @@
+
 .overall{
     display: flex;
     justify-content: space-around;
     height: 600px;
+    
   }
   .head-bar{
     display: flex;
