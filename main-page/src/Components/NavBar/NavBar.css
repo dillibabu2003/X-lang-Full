@@ -4,13 +4,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
   }
 
   .navigation{
     position: relative;
-    width:700px;
+    width:500px;
     height: 70px;
-    background: aqua;
+    background:#D4AAF6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,9 +72,9 @@
     width:70px;
     top:-50px;
     height: 70px;
-    background-color: #29fd53;
+    background-color: #f3e4f6;
     border-radius: 50%;
-    border: 6px solid white;
+    border: 6px solid none;
     transition: 0.5s;
     }
     .indicator::before{
@@ -85,7 +86,7 @@
       height: 20px;
       background: transparent;
       border-top-right-radius: 20px;
-      box-shadow: 1px -10px 0 0 white;
+      box-shadow: 1px -10px 0 0 none;
     }
 
     .indicator::after{
@@ -97,7 +98,7 @@
       height: 20px;
       background: transparent;
       border-top-left-radius: 20px;
-      box-shadow: -1px -10px 0 0 white;
+      box-shadow: -1px -10px 0 0 radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );;
     }
     .navigation ul li:nth-child(1).active ~ .indicator
     {
@@ -119,5 +120,3 @@
     {
       transform: translateX(calc(70px*4));
     }
-
-  

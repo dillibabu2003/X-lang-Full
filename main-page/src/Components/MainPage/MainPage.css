@@ -160,8 +160,33 @@
     color: #6d08f2;
     overflow:scroll;
     overflow-x: hidden;    
-  
   }
+  .description::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .description::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+  }
+  .description::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+  .description::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+  }
+  .description::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+  }
+
+
+
+
+
+
+
+
   .text-box-head{
     color: #9e05c1;
   }

@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import FriendsCard from '../FriendsCard/FriendsCard';
+import Lottie from "lottie-react"
+import animationData from './friends-animation.json'
+import './FindFriends.css'
 
 const FindFriends = () => {
     const [d,setData] = useState([{}]);
@@ -30,6 +33,12 @@ const FindFriends = () => {
             <option value="Biology">Biology</option>
             <option value="Economics">Economics</option>
           </select>
+          <div className='animations-and-list'>
+    <div><Lottie animationData={animationData}
+    style={{
+      height:600,
+      width:600
+    }}/></div>
     <div className='friends-list'>
     {
         (typeof d.Friends === 'undefined')?(
@@ -42,6 +51,7 @@ const FindFriends = () => {
        }))
       
       }
+    </div>
     </div>
     </>
   )

@@ -1,7 +1,9 @@
 import React,{useState,useEffect} from 'react'
 import './Findjobs.css'
-import './jobs.jpeg'
+import './jobs.png'
 import JobCard from '../JobCard/JobCard'
+import Lottie from "lottie-react"
+import animationData from './job-animation.json'
 
 const Findjobs = () => {
   const [d,setData] = useState([{}])
@@ -33,7 +35,9 @@ const Findjobs = () => {
         <div className='pannel-and-list'>
           <div className='quotes-and-picture'>
             <div className='quotes'>MAKE<br/>&nbsp; AN <br/>&nbsp; &nbsp;  EXPERIENCE<br/> &nbsp; &nbsp; &nbsp;&nbsp; BY<br/>&nbsp; &nbsp; &nbsp; &nbsp;  EXPLORING</div>
-            <div className='job-image'><img src={require('./jobs.jpeg')}  style={{width:'400px',height:'400px',borderBottomRightRadius:'20px',WebkitBorderBottomLeftRadius:'20px'}}></img></div>
+            <div className='job-image'><Lottie animationData={animationData}
+            style={{height:500,width:500}}/></div>
+            {/* <img src={require('./jobs.png')}  style={{width:'400px',height:'400px',borderBottomRightRadius:'20px',WebkitBorderBottomLeftRadius:'20px'}}></img> */}
           </div>
           <div className='jobs-list'>
           {
