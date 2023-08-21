@@ -4,7 +4,10 @@ import animationData from './course-animation.json'
 const FindCourse = () => {
   return (
     <div className='overall'>
-      <h1>Find your similar courses</h1>
+      <div className='course-list'>
+        <h1>Find your similar courses</h1>
+        <iframe src="leetcode.com" height="500" width="900" title="Iframe Example"></iframe> 
+      </div>
       <div>
       <Lottie animationData={animationData}
         style={{

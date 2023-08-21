@@ -17,6 +17,7 @@ import MaybeShowNavBar from '../MaybeShowNavBar/MaybeShowNavBar';
 import Findjobs from '../FindJobs/Findjobs';
 import FindFriends from '../FindFriends/FindFriends';
 import FindCourse from '../FindCourse/FindCourse';
+import MyCourses from '../MyCourses/MyCourses';
 
 const cookies = new Cookies();
 
@@ -56,6 +57,7 @@ const LoginPage = () => {
                 <Route path="/findjobs" element={<Findjobs/>}/>
                 <Route path="/findfriends" element={<FindFriends/>}/>
                 <Route path="/findcourse" element={<FindCourse/>}/>
+                <Route path="/mycourses" element={<MyCourses/>}/>
             </Routes>
         </>
     );

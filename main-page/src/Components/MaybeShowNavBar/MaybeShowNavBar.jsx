@@ -5,7 +5,7 @@ const MaybeShowNavBar = ({children}) => {
     const [showNavNar,setShowNavBar]=useState(false);
     useEffect(()=>{
       console.log("this is location:"+location)
-      if(location.pathname==='/messaging'){
+      if(location.pathname==='/messaging' || location.pathname==='/chatbot' || location.pathname==='/mycourses'){
         setShowNavBar(false);
       }else{
         setShowNavBar(true);

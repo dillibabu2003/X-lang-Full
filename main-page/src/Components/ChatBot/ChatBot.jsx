@@ -76,20 +76,7 @@ function ChatBot() {
   return (
     <div className="App">
       <div style={{ position:"relative", height: "500px", width: "800px",paddingLeft:350,paddingTop:30}}>
-        <MainContainer>
-          <ChatContainer>       
-            <MessageList 
-              scrollBehavior="smooth" 
-              typingIndicator={isTyping ? <TypingIndicator content="ChatGPT is typing" /> : null}
-            >
-              {messages.map((message, i) => {
-                console.log(message)
-                return <Message key={i} model={message} />
-              })}
-            </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />        
-          </ChatContainer>
-        </MainContainer>
+         <iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe> 
       </div>
     </div>
   )

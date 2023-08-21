@@ -9,7 +9,7 @@
 
   .navigation{
     position: relative;
-    width:500px;
+    width:700px;
     height: 70px;
     background:#D4AAF6;
     display: flex;
@@ -120,3 +120,9 @@
     {
       transform: translateX(calc(70px*4));
     }
+
+    .courses{
+      margin-left: 10px;
+    }
+
+
