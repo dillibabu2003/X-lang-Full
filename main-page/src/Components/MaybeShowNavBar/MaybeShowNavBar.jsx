@@ -5,7 +5,7 @@ const MaybeShowNavBar = ({children}) => {
     const [showNavNar,setShowNavBar]=useState(false);
     useEffect(()=>{
       console.log("this is location:"+location)
-      if(location.pathname==='/messaging' || location.pathname==='/chatbot' || location.pathname==='/mycourses'){
+      if(location.pathname==='/messaging' || location.pathname==='/chatbot' || location.pathname==='/mycourses' ||location.pathname=='/findcourse'){
         setShowNavBar(false);
       }else{
         setShowNavBar(true);
@@ -15,5 +15,4 @@ const MaybeShowNavBar = ({children}) => {
     <div>{showNavNar&&children}</div>
   )
 }
-
 export default MaybeShowNavBar

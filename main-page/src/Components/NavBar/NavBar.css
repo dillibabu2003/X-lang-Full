@@ -4,14 +4,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 20px;
   }
 
   .navigation{
     position: relative;
     width:700px;
     height: 70px;
-    background:#D4AAF6;
+    background:#788cfd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +72,7 @@
     width:70px;
     top:-50px;
     height: 70px;
-    background-color: #f3e4f6;
+    background-color: #7051e2;
     border-radius: 50%;
     border: 6px solid none;
     transition: 0.5s;

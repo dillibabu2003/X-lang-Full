@@ -23,7 +23,7 @@ const Findjobs = () => {
       setInputSelect(e.target.value);
     }
   return (
-    <>
+    <div className='jobs-wrapper'>
       <h1>Find Your Similar Jobs</h1>
       <select name="languages" className='languages-options' onChange={handleInputselectChange} value={inputselect}>
               <option value="MachineLearning">Machine Learning</option>
@@ -54,7 +54,7 @@ const Findjobs = () => {
             }
           </div>
       </div>
-    </>
+    </div>
   )
 
 }

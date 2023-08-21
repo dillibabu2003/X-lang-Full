@@ -2,7 +2,7 @@
 .overall{
     display: flex;
     justify-content: space-around;
-    height: 600px;
+    height: 520px;
     
   }
   .head-bar{
@@ -71,7 +71,7 @@
   
   .wrapper{
     width: 60%;
-    height: 650px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -84,9 +84,9 @@
     text-align: center;
     margin-right: 10px;
     border-radius: 50px;
-    background-color: #D4AAF6; 
+    background-color: #788cfd; 
     border: none;
-    box-shadow: 2px 3px rgb(147, 142, 142);
+    box-shadow: 1px 1px rgb(147, 142, 142);
     outline: none;
   }
   textarea:focus, input:focus {
@@ -118,7 +118,7 @@
   .youtube-box{
     width:800px;
     height: 450px;
-    background-color: rgb(237, 177, 229);
+    background-color:  #D4AAF64D  ;
   }
   .language{
     padding-right: 10px;
@@ -143,10 +143,8 @@
     color: red;
   }
   .text-box{
-    height: 600px;
+    height: 450px;
     width: 600px;
-  
-   padding-top: 70px;
   }
   .description{
     width: 550px;
@@ -197,7 +195,7 @@
     width: 200px;
     height: 42px;
     border-radius: 6px;
-    background: #7C18FB;
+    background: #3e5af8;
     color: white;
     font-family: Comfortaa;
      font-size: 17px;
@@ -207,28 +205,31 @@
     text-align: center;
   }
   option {
-    color: #7C18FB;
+    color: #1849fb;
     background-color: #D4AAF6;
   }
   .find-options{
     width: 136.0443572998047px;
-    height: 30.45864486694336px;
+    height: 25px;
     top: 375.5413818359375px;
     left: -657.0250244140625px;  
     text-align: center;
     margin-top: 3px;
-    background-color: #7C18FB;
-    border-radius: 6px;
+    background-color: #5c64fc;
+    border-radius: 10px;
     color: white;
     padding: 10px;
+    transition: all .2s ease-in-out;
+
   }
-  
+  .find-options:hover{
+    transform: scale(1.05); 
+    background-color: #1766ee ;
+  }
   .option-button{
     display: flex;
     justify-content: space-around;
-    width: 920px;
-    margin-left: 50px;
-   
+    width: 900px;
   }
   .languages-options-wrapper{
     display: flex;
@@ -247,7 +248,7 @@
   .upload-button {
     align-items: center;
     appearance: none;
-    background-color: #D4AAF6;
+    background-color: #5250f9;
     border-radius: 24px;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
@@ -280,7 +281,7 @@
   
   
   .upload-button:hover {
-    background: #a74fee;
+    background: #0905ed;
     color: white;
   
   }
