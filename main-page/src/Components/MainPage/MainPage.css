@@ -84,17 +84,17 @@
     text-align: center;
     margin-right: 10px;
     border-radius: 50px;
-    background-color: #788cfd; 
-    border: none;
+    background-color: #dafaed; 
+    border:solid 0.5px   green;
     box-shadow: 1px 1px rgb(147, 142, 142);
     outline: none;
   }
   textarea:focus, input:focus {
-      color:  #7319E5;
+      color:  green;
       border: none;
   }
   ::placeholder{
-    color: #7319E5;
+    color:green;
     opacity: 0.5;
   }
   .form-group{
@@ -103,12 +103,6 @@
     align-items: center;
   
   }
-  
-  /* .upload-button{
-    background-color: blue;
-    height: 40px;
-    margin-left: 30px;
-  } */
   .wrapper .form{
     width:50%;
     display: flex;
@@ -118,11 +112,11 @@
   .youtube-box{
     width:800px;
     height: 450px;
-    background-color:  #D4AAF64D  ;
+    background-color:#d5dada;
   }
   .language{
     padding-right: 10px;
-    color: #7319E5;
+    color: #d5dada;
     font-size: 20px;
     font-weight: bold;
   }
@@ -150,12 +144,12 @@
     width: 550px;
     height: 430px;
    
-    background-color: #D4AAF64D;
+    background-color:#d5dada;
     /* border-radius: 10px; */
     padding-top: 20px;
     padding-left: 20px;
     font-size: 20px;
-    color: #6d08f2;
+    color:rgb(2, 85, 2);
     overflow:scroll;
     overflow-x: hidden;    
   }
@@ -185,9 +179,7 @@
 
 
 
-  .text-box-head{
-    color: #9e05c1;
-  }
+
   .languages-and-options{
      margin-bottom: 10px;
   }
@@ -195,7 +187,7 @@
     width: 200px;
     height: 42px;
     border-radius: 6px;
-    background: #3e5af8;
+    background: #325a4e;
     color: white;
     font-family: Comfortaa;
      font-size: 17px;
@@ -205,9 +197,12 @@
     text-align: center;
   }
   option {
-    color: #1849fb;
-    background-color: #D4AAF6;
+    color: #325a4e;
+    background-color:#bfc4c5;
   }
+  select.languages-options  option:hover {
+    box-shadow: 0 0 10px 100px #1882A8 inset;
+}
   .find-options{
     width: 136.0443572998047px;
     height: 25px;
@@ -215,7 +210,7 @@
     left: -657.0250244140625px;  
     text-align: center;
     margin-top: 3px;
-    background-color: #5c64fc;
+    background-color: #325a4e;
     border-radius: 10px;
     color: white;
     padding: 10px;
@@ -224,7 +219,8 @@
   }
   .find-options:hover{
     transform: scale(1.05); 
-    background-color: #1766ee ;
+    background-color:#92e3a9;
+    color:black;
   }
   .option-button{
     display: flex;
@@ -248,7 +244,7 @@
   .upload-button {
     align-items: center;
     appearance: none;
-    background-color: #5250f9;
+    background-color:#325a4e;
     border-radius: 24px;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
@@ -281,8 +277,8 @@
   
   
   .upload-button:hover {
-    background: #0905ed;
-    color: white;
+    background:#92e3a9;
+    color:black;
   
   }
   

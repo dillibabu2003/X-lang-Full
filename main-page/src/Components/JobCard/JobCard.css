@@ -1,30 +1,62 @@
 .company-card{
-    width: 800px;
-    height: 150px;
+    width: 700px;
+    height: 200px;
     margin: 30px;
-    background-color: rgba(255, 255, 255, .15);  
+    display: flex;
+    flex-direction: column;
+    background-color: #dafaed;  
     backdrop-filter: blur(5px); 
     border-radius: 30px;
     box-shadow: 4px 4px 4px  rgba(0, 0, 0, 0.25);
     transition: all .2s ease-in-out; 
 }
 .company-card:hover {
-    transform: scale(1.06); 
+    transform: scale(1.02); 
+    background-color:#62ae92;
   }
 .name-and-location{
     display: flex;
     justify-content: space-around;
-    font-size: x-large;
+   
 }
-.main-details{
-    margin: 15px;
-
-}
-.other-details{
-    display: flex;
-    justify-content: space-around;
+.name-and-role{
     margin-top: 20px;
 }
+
 .info{
     width: 300px;
 }
+.company-name{
+    font-size: 18px;
+}
+.role{
+    font-size: 25px;
+}
+.experience-skillsets{
+    margin-left: 40px;
+    margin-top: 30px;
+    display: flex;
+    
+}
+.email-id{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.email-id-desc{
+    margin-left: 6px;
+}
+.apply-button div{
+     margin-left:270px;
+     margin-top:25px;
+     background-color: #325a4e;
+     padding: 8px 30px 8px 30px;
+     border-radius: 20px;
+     color:white;
+}
+/* .year-salary-skills{
+    margin-top: 30px;
+} */
+
+
+

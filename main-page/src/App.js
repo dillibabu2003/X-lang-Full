@@ -7,6 +7,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import MessagingApp from "./Components/LoginPage/LoginPage";
 import LoginPage from "./Components/LoginPage/LoginPage";
 import ChannelListContainer from "./Components/msg_components/Channellistcontainer";
+import './background.jpg'
 
 function App(){
 

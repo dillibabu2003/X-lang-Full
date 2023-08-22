@@ -24,6 +24,7 @@ const Findjobs = () => {
     }
   return (
     <div className='jobs-wrapper'>
+      <div className='title-and-options'>
       <h1>Find Your Similar Jobs</h1>
       <select name="languages" className='languages-options' onChange={handleInputselectChange} value={inputselect}>
               <option value="MachineLearning">Machine Learning</option>
@@ -32,9 +33,10 @@ const Findjobs = () => {
               <option value="Biology">Biology</option>
               <option value="Economics">Economics</option>
         </select>
+        </div>
         <div className='pannel-and-list'>
           <div className='quotes-and-picture'>
-            <div className='quotes'>MAKE<br/>&nbsp; AN <br/>&nbsp; &nbsp;  EXPERIENCE<br/> &nbsp; &nbsp; &nbsp;&nbsp; BY<br/>&nbsp; &nbsp; &nbsp; &nbsp;  EXPLORING</div>
+            <div className='quotes'>MAKE<br/>&nbsp;&nbsp; AN <br/>&nbsp; &nbsp;&nbsp;&nbsp;  EXPERIENCE<br/> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BY<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  EXPLORING</div>
             <div className='job-image'><Lottie animationData={animationData}
             style={{height:500,width:500}}/></div>
             {/* <img src={require('./jobs.png')}  style={{width:'400px',height:'400px',borderBottomRightRadius:'20px',WebkitBorderBottomLeftRadius:'20px'}}></img> */}

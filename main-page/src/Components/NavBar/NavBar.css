@@ -11,11 +11,16 @@
     position: relative;
     width:700px;
     height: 70px;
-    background:#788cfd;
+    background:#92e3a9;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    box-shadow: 0 0 50px 15px #92e3a9;
+    
+  }
+  .title-and-animation{
+    padding-left: 30px;
   }
 
   .navigation ul{
@@ -69,14 +74,15 @@
 
   .indicator{
     position: absolute;
-    width:70px;
+    width:70px;   
     top:-50px;
     height: 70px;
-    background-color: #7051e2;
+    background-color:#babfbf;
     border-radius: 50%;
     border: 6px solid none;
     transition: 0.5s;
     }
+
     .indicator::before{
       content:'';
       position: absolute;

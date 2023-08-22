@@ -7,7 +7,6 @@ import './FindFriends.css'
 
 const FindFriends = () => {
     const [d,setData] = useState([{}]);
-    let val=0; 
     const [inputselect,setInputSelect]=useState("Default");
     useEffect(()=>{
       fetch("frnd/"+inputselect).then(
@@ -25,6 +24,7 @@ const FindFriends = () => {
   
   return (
     <>
+    <div className='title-and-animation'>
     <h1>Find Your Similar Friends</h1>
     <select name="languages" className='languages-options' onChange={handleInputselectChange} value={inputselect}>
             <option value="MachineLearning">Machine Learning</option>
@@ -32,8 +32,9 @@ const FindFriends = () => {
             <option value="Chemistry">Chemistry</option>
             <option value="Biology">Biology</option>
             <option value="Economics">Economics</option>
-          </select>
-          <div className='animations-and-list'>
+    </select>
+    </div>
+    <div className='animations-and-list'>
     <div><Lottie animationData={animationData}
     style={{
       height:600,
@@ -46,8 +47,7 @@ const FindFriends = () => {
         ) 
         :
         (d.Friends.map((Friend,i)=>{
-          val+=1;
-          return <FriendsCard  val={val} name={Friend.USER} skills={Friend.SKILLSETS}/> 
+          return <FriendsCard name={Friend.USER} skills={Friend.SKILLSETS}/> 
        }))
       
       }
@@ -58,9 +58,3 @@ const FindFriends = () => {
 }
 
 export default FindFriends
-
-
-
-// (d.Friends.map((Friends,i)=>(
-//     <div  key= {i}>{Friends}</div>
-//     )))

@@ -1,28 +1,31 @@
 .profile-background{
         width: 125px;
         height: 125px;
-        border-radius: 50%;
+        margin-left: 10px;
+        border-radius: 5px;
         box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .overall-card{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 .friends-wrapper{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 800px;
-    height: 152px;
+    height: 180px;
     background-color: rgba(255, 255, 255, .15);  
     backdrop-filter: blur(20px); 
-    border-radius: 88px;
+    border-radius: 30px;
     margin:15px;
     transition: all .2s ease-in-out; 
+    background-color:  #dafaed;
 }
 .friends-wrapper:hover {
-    transform: scale(1.03); 
+    transform: scale(1.02); 
   }
 .profile-and-info{
     width: 900px;
@@ -32,16 +35,17 @@
 }
 .skill-name{
     border-radius: 10px;
-    background-color: #dd128c;
+    background-color:  #325a4e;
     color: rgb(239, 235, 10);
     height: 25px;
-    padding: 3px;
+    padding: 5px;
     display: inline-block;
-    margin: 3px;
+    margin: 8px;
     color: rgb(243, 249, 253);
     
 }
 .name-and-skillsets{
+    margin-left: 20px;
     width: 700px;
 }
 .profile-and-info{

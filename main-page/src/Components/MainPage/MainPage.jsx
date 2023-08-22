@@ -88,7 +88,9 @@ const MainPage = () => {
         <div className='text-box'>
         <div className="languages-options-wrapper"onSubmit={callApi}>
         {/* <input className="InputBox" type='text' placeholder='code' onChange={handleInputtextChange} value={inputtext}/> */}
-        <select name="languages" className='languages-options' onChange={handleInputselectChange} value={inputselect}>
+        <select name="languages" className='languages-options'
+        onfocus='this.size=10;' onblur='this.size=0;' onchange='this.size=1; this.blur();'
+         onChange={handleInputselectChange} value={inputselect}>
             <option value="tamil">Tamil</option>
             <option value="english">English</option>
             <option value="malayalam">Malayalam</option>
