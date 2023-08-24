@@ -5,6 +5,8 @@ import { Channellistcontainer, Channelcontainer, Auth } from '../msg_components'
 import "./MessagingApp.css"
 import { StreamChat } from 'stream-chat';
 import Cookies from 'universal-cookie';
+import './chatBackground.png';
+import './loginBackground.png'
 
 const cookies = new Cookies();
 
