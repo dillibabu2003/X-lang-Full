@@ -1,7 +1,8 @@
 import React from 'react'
 import './FriendsCard.css'
+import './person.png'
 const FriendsCard = (props) => {
-    const {name,skills,val}=props;
+    const {name,skills}=props;
    
   return (
     <div className='overall-card'>

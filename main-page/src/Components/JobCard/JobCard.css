@@ -17,7 +17,6 @@
 .name-and-location{
     display: flex;
     justify-content: space-around;
-   
 }
 .name-and-role{
     margin-top: 20px;
@@ -34,8 +33,9 @@
 }
 .experience-skillsets{
     margin-left: 40px;
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
+    font-size: 18px;
     
 }
 .email-id{
@@ -54,9 +54,7 @@
      border-radius: 20px;
      color:white;
 }
-/* .year-salary-skills{
-    margin-top: 30px;
-} */
+
 
 
 

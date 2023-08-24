@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import './Findjobs.css'
-import './jobs.png'
+
 import JobCard from '../JobCard/JobCard'
 import Lottie from "lottie-react"
 import animationData from './job-animation.json'
@@ -38,7 +38,7 @@ const Findjobs = () => {
           <div className='quotes-and-picture'>
             <div className='quotes'>MAKE<br/>&nbsp;&nbsp; AN <br/>&nbsp; &nbsp;&nbsp;&nbsp;  EXPERIENCE<br/> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;BY<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  EXPLORING</div>
             <div className='job-image'><Lottie animationData={animationData}
-            style={{height:500,width:500}}/></div>
+            style={{height:300,width:400}}/></div>
             {/* <img src={require('./jobs.png')}  style={{width:'400px',height:'400px',borderBottomRightRadius:'20px',WebkitBorderBottomLeftRadius:'20px'}}></img> */}
           </div>
           <div className='jobs-list'>

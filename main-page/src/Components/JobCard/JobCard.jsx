@@ -7,14 +7,18 @@ const JobCard = (props) => {
     <div className='company-card'>
         <div className='name-and-location'>
           <div className='name-and-role'>
-            <div className='role'>{companyDetails[3]}</div>
-            <div className='company-name'>{companyDetails[0]}</div>
+            <img src=''></img>
+            <div className='role'>Role:{companyDetails[3]}</div>
+            <div className='company-name'>Company:{companyDetails[0]}</div>
           </div>
           <div className='email-id'><div><svg height='25px' width='25px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="email"><path fill="#222" d="M53.42 53.32H10.58a8.51 8.51 0 0 1-8.5-8.5V19.18a8.51 8.51 0 0 1 8.5-8.5h42.84a8.51 8.51 0 0 1 8.5 8.5v25.64a8.51 8.51 0 0 1-8.5 8.5ZM10.58 13.68a5.5 5.5 0 0 0-5.5 5.5v25.64a5.5 5.5 0 0 0 5.5 5.5h42.84a5.5 5.5 0 0 0 5.5-5.5V19.18a5.5 5.5 0 0 0-5.5-5.5Z"></path><path fill="#222" d="M32 38.08a8.51 8.51 0 0 1-5.13-1.71L3.52 18.71a1.5 1.5 0 1 1 1.81-2.39L28.68 34a5.55 5.55 0 0 0 6.64 0l23.35-17.68a1.5 1.5 0 1 1 1.81 2.39L37.13 36.37A8.51 8.51 0 0 1 32 38.08Z"></path><path fill="#222" d="M4.17 49.14a1.5 1.5 0 0 1-1-2.62l18.4-16.41a1.5 1.5 0 0 1 2 2.24L5.17 48.76a1.46 1.46 0 0 1-1 .38zm55.66 0a1.46 1.46 0 0 1-1-.38l-18.4-16.41a1.5 1.5 0 1 1 2-2.24l18.39 16.41a1.5 1.5 0 0 1-1 2.62z"></path></svg></div><div className='email-id-desc'>{companyDetails[2]}</div>
           </div>
         </div>
         <div className='experience-skillsets'>
           <div className='year-salary-skills'>
+            <div className='locations'><svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.43137 13.7194C1.00688 7.99711 0 7.40984 0 5.30682C0 2.42614 3.20923 0.0909119 7.16803 0.0909119C11.1268 0.0909119 14.3361 2.42614 14.3361 5.30682C14.3361 7.40984 13.3292 7.99711 7.9047 13.7194C7.54872 14.0936 6.78731 14.0935 6.43137 13.7194ZM7.16803 7.48011C8.81754 7.48011 10.1547 6.5071 10.1547 5.30682C10.1547 4.10654 8.81754 3.13352 7.16803 3.13352C5.51853 3.13352 4.18135 4.10654 4.18135 5.30682C4.18135 6.5071 5.51853 7.48011 7.16803 7.48011Z" fill="black"/>
+</svg>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;{companyDetails[1]}</div>
             <div className='experience'><svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.0328 12.5844C13.0328 12.9504 12.7412 13.2468 12.3811 13.2468H8.47131C8.11128 13.2468 7.81967 12.9504 7.81967 12.5844V10.5974H0V16.5584C0 17.6182 0.912295 18.5455 1.95492 18.5455H18.8975C19.9402 18.5455 20.8525 17.6182 20.8525 16.5584V10.5974H13.0328V12.5844ZM18.8975 3.97403H15.6393V1.98701C15.6393 0.927273 14.727 0 13.6844 0H7.16803C6.12541 0 5.21311 0.927273 5.21311 1.98701V3.97403H1.95492C0.912295 3.97403 0 4.9013 0 5.96104V9.27273H20.8525V5.96104C20.8525 4.9013 19.9402 3.97403 18.8975 3.97403ZM13.0328 3.97403H7.81967V2.64935H13.0328V3.97403Z" fill="black"/>
             </svg>&nbsp;&nbsp; &nbsp;&nbsp;{companyDetails[5]} Years
