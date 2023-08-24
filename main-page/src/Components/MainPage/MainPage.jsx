@@ -82,13 +82,14 @@ const MainPage = () => {
           {errorMsg &&<div className='error-msg'>{errorMsg}</div>}
           <br></br>
           <div className="youtube-box">
-            <ReactPlayer url={youtubeURL} style={{borderRadius:"3rem"}}className='video'/>
+            <ReactPlayer url={youtubeURL} className='video'/>
           </div>
         </div>
         <div className='text-box'>
         <div className="languages-options-wrapper"onSubmit={callApi}>
         {/* <input className="InputBox" type='text' placeholder='code' onChange={handleInputtextChange} value={inputtext}/> */}
         <select name="languages" className='languages-options'
+        onfocus='this.size=10;' onblur='this.size=0;' onchange='this.size=1; this.blur();'
          onChange={handleInputselectChange} value={inputselect}>
             <option value="tamil">Tamil</option>
             <option value="english">English</option>

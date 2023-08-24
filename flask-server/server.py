@@ -1,7 +1,6 @@
 from flask import Flask, redirect, url_for, jsonify ,request
 from youtube_transcript_api import YouTubeTranscriptApi
-from googletrans import Translator
-translator = Translator()
+from deep_translator import GoogleTranslator
 app = Flask(__name__)
 
 import sqlite3
@@ -88,7 +87,7 @@ def translate(lang,tag):
         textval  = get_youtube_to_text(tag)    
     except:
         textval = "NO SUB-TITLE"
-    answer = translator.translate(textval , dest= code).text
+    answer = GoogleTranslator(source='auto', target=code).translate(textval)
     prediction  = str(model.predict(fitted_vectorizer.transform([textval])))
     prediction = prediction[2:-2]
     Domain_storage = prediction
@@ -101,15 +100,23 @@ def translate(lang,tag):
             "tag" : [str(answer)],
             }
 
-@app.route("/add_friend/<Name>")
-def add_friend(Name):
-    with open("Friend.txt",'w')as f:
-        pass
-    with open("Friend.txt",'w')as f:
-        f.write(Name)
+@app.route("/frnd/<dropbar>")
+def friends(dropbar):
+
+    if(dropbar != 'Default'):
+        return {
+            "Friends" : friends_finder(dropbar)
+        }
+    with open('Domain.txt', 'r') as f:
+        Value = f.read()
+    if(Value == ""):
+        return {
+            "Friends" : ("NOTHING TO SHOW")
+        }
     return {
-        "TAG" : Name
+        "Friends" : friends_finder(Value)
     }
+
 
 
 @app.route("/job/<dropbar>")
@@ -127,9 +134,8 @@ def job(dropbar):
     return {
         "Jobs" : [(jobs_finder(Value))],
     }
-
 def jobs_finder(Domain):
-	jobsconn = sqlite3.connect(r'C:\Users\dilli\OneDrive\Desktop\stream-chat\stream-chat\flask-server\Jobs.db')
+	jobsconn = sqlite3.connect('Jobs.db')
 	jobscursor = jobsconn.cursor()
 	jobs = view_all_users(jobscursor,Domain)
 	return jobs
@@ -159,46 +165,39 @@ model = LinearSVC().fit(tfidf_vectorizer_vectors, y_train)
 #----------------------------------------------------------------------------
 
 def view_all_users(c,Domain):
-	c.execute('SELECT * FROM NEW'+Domain)
+	c.execute('SELECT * FROM '+Domain)
 	data = c.fetchall()
 	return data
 
+def find_user(c,Domain,username):
+	c.execute('SELECT * FROM '+Domain +' WHERE username =(?)',(username,))
+	li=list(c.fetchall())
+	return len(li)
+
 #----------------------------------------------------------------------------
 
-
-
-def find_users_of_domain(Domain):
-    blockchainconn = sqlite3.connect(r'C:\Users\dilli\OneDrive\Desktop\stream-chat\stream-chat\flask-server\BlockChainFinal.db')
-    blockchaincursor = blockchainconn.cursor()
-    with open(r'C:\Users\dilli\OneDrive\Desktop\stream-chat\stream-chat\flask-server\Certificate_table_name.txt', 'r') as f:
-        table_name_certificate = f.read()
-    blockchaincursor.execute("SELECT * FROM FINAL"+table_name_certificate+" WHERE domain = (?) ",(Domain,))
-    return blockchaincursor.fetchall()
-
-def skill_list(username):
-    blockchainconn = sqlite3.connect(r'C:\Users\dilli\OneDrive\Desktop\stream-chat\stream-chat\flask-server\BlockChainFinal.db')
-    blockchaincursor = blockchainconn.cursor()
-    with open(r'C:\Users\dilli\OneDrive\Desktop\stream-chat\stream-chat\flask-server\Certificate_table_name.txt', 'r') as f:
-        table_name_certificate = f.read()
-    blockchaincursor.execute("SELECT domain FROM FINAL"+table_name_certificate+" WHERE username = (?)",(username,))
-    return blockchaincursor.fetchall()
-
-@app.route("/friends/<Domain>")
-def function(Domain):
-    list_of_users = find_users_of_domain(Domain)
-    main_list = []
-    for iter in list_of_users:
-        skills = skill_list(iter[0])
-        skillset = set()
-        for iteration in skills:
-            skillset.add(iteration)
-        dict ={
-            "USER" : iter[0],
-            "SKILLSETS" : list(skillset)
-        }
-        main_list.append(dict)
-    return main_list
+def friends_finder(Domain):
+	friendsconn = sqlite3.connect('Friends.db')
+	friendscursor = friendsconn.cursor()
+	users = view_all_users(friendscursor,Domain)
+	print(users)
+	main_dict = []
+	ind=0
+	for user in users:
+		skillsets = []
+		for topics in Domains:
+			if(find_user(friendscursor,topics,user[0]) >=1):
+				skillsets.append(topics)
+		dict = {
+			"USER" : user[0],
+			"SKILLSETS" : skillsets
+		}
+		print(dict)
+		main_dict.append(
+            dict)
+		ind  = ind+1
+	return (main_dict)
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()

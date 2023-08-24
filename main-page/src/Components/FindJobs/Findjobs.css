@@ -3,16 +3,8 @@
     width: 500px;
     /* background-color: #f7f7f7; */
     margin: 50px;
-    background: linear-gradient(
-      to right bottom,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.2)
-  );
-  backdrop-filter: blur(1rem);
-  z-index: 1;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rgba(0, 0, 0, 0.2);
-  outline: none;
+   border-radius: 30px;
+   background-color: #dedfdf;  
 }
 
 .title-and-options{

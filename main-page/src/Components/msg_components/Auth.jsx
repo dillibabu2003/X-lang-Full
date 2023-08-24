@@ -18,7 +18,6 @@ const initialState = {
 const Auth = () => {
     const [form, setForm] = useState(initialState);
     const [isSignup, setIsSignup] = useState(true);
-    const [d,setData] = useState([{}])
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -28,7 +27,7 @@ const Auth = () => {
         e.preventDefault();
 
         const { username, password, phoneNumber, avatarURL } = form;
-       callApi(username);
+
         const URL = 'http://localhost:5000/auth';
         // const URL = 'https://medical-pager.herokuapp.com/auth';
 
@@ -48,16 +47,6 @@ const Auth = () => {
         }
 
         window.location.reload();
-    }
-    const callApi=(username)=>{
-        fetch("add_friend/"+username).then(
-            res=>res.json()
-        ).then(
-            d =>{ 
-              setData(d)
-              console.log(d)
-            }
-        )
     }
 
     const switchMode = () => {

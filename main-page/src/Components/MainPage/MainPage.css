@@ -7,14 +7,19 @@
   }
   .head-bar{
     display: flex;
+    width: 1371.9549560546875px;
     height: 96.69548797607422px;
     border-radius: 30px;
+    /* background-color: #D4AAF633; */
+    /*margin-left: 40px;
+    margin-top: 40px;*/
+    /* border: 1px solid #7C18FB; */
   }
   .logo-and-name{
     display: flex;
     padding-top: 10px;
     margin-left: 30px;
-  
+    /* background-color: #D4AAF633; */
   }
   .app-name{
     width: 127.74992370605469px;
@@ -22,10 +27,12 @@
     color:rgb(129, 1, 157);
     font-size: 30px;
     margin-top: 20px;
+    /* background-color: #D4AAF633; */
   }
   .login{
   width: 136.0443572998047px;
   height: 30.45864486694336px;
+  /* background-color:#F1DFF9; */
   border: 1px solid #7C18FB;
   border-radius: 6px;
   text-align: center;
@@ -39,6 +46,7 @@
   
   .navbar{
     display: flex;
+    /* background-color: #D4AAF633; */
     justify-content: space-around;
     width: 1000px;
   }
@@ -49,10 +57,12 @@
     height: 90%;
     margin: 5px;
     margin-right: 15px;
+    /* background-color: #D4AAF633; */
   }
   .navop{
     height: 70px;
     margin-top: 30px;
+    /* background-color: #D4AAF633; */
     font-weight: bold;
     font-size: 20px;
     color: #7319E5;
@@ -74,20 +84,10 @@
     text-align: center;
     margin-right: 10px;
     border-radius: 50px;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
-    );
-    backdrop-filter: blur(1rem);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    background-color: #dafaed; 
+    border:solid 0.5px   green;
+    box-shadow: 1px 1px rgb(147, 142, 142);
     outline: none;
-    border:none;
   }
   textarea:focus, input:focus {
       color:  green;
@@ -95,8 +95,7 @@
   }
   ::placeholder{
     color:green;
-    opacity: 0.4;
-    width: 200px;
+    opacity: 0.5;
   }
   .form-group{
     display: flex;
@@ -113,20 +112,7 @@
   .youtube-box{
     width:800px;
     height: 450px;
-    /* background: white; */
-    margin-top: 20px;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
-    );
-    backdrop-filter: blur(0.2rem);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    background-color:#d5dada;
   }
   .language{
     padding-right: 10px;
@@ -156,24 +142,14 @@
   }
   .description{
     width: 550px;
-    height: 410px;
+    height: 430px;
+   
+    background-color:#d5dada;
     /* border-radius: 10px; */
     padding-top: 20px;
     padding-left: 20px;
-    margin-top: 20px;
     font-size: 20px;
-    background: linear-gradient(
-      to right bottom,
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.2)
-  );
-  backdrop-filter: blur(0.2rem);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    color:rgb(2, 85, 2);
     overflow:scroll;
     overflow-x: hidden;    
   }
@@ -195,7 +171,15 @@
   .description::-webkit-scrollbar-thumb:active{
   	background: rgba(0,0,0,.9);
   }
-  
+
+
+
+
+
+
+
+
+
   .languages-and-options{
      margin-bottom: 10px;
   }
@@ -203,7 +187,7 @@
     width: 200px;
     height: 42px;
     border-radius: 6px;
-    background:#33ab76;
+    background: #325a4e;
     color: white;
     font-family: Comfortaa;
      font-size: 17px;
@@ -216,6 +200,9 @@
     color: #325a4e;
     background-color:#bfc4c5;
   }
+  select.languages-options  option:hover {
+    box-shadow: 0 0 10px 100px #1882A8 inset;
+}
   .find-options{
     width: 136.0443572998047px;
     height: 25px;
@@ -223,7 +210,7 @@
     left: -657.0250244140625px;  
     text-align: center;
     margin-top: 3px;
-    background-color: #2c829c;
+    background-color: #325a4e;
     border-radius: 10px;
     color: white;
     padding: 10px;
@@ -232,13 +219,12 @@
   }
   .find-options:hover{
     transform: scale(1.05); 
-    background-color:#1d9788;
-    color:white;
+    background-color:#92e3a9;
+    color:black;
   }
   .option-button{
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
     width: 900px;
   }
   .languages-options-wrapper{
@@ -258,7 +244,7 @@
   .upload-button {
     align-items: center;
     appearance: none;
-    background-color:#1cbab9;
+    background-color:#325a4e;
     border-radius: 24px;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
@@ -291,8 +277,8 @@
   
   
   .upload-button:hover {
-    background:#26b49d;
-    color:white;
+    background:#92e3a9;
+    color:black;
   
   }
   
