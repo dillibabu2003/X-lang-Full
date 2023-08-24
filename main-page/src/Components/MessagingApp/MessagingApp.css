@@ -1,5 +1,5 @@
 :root {
-    --primary-color : #1eb8b2   ;
+    --primary-color : red;
     --primary-color-alpha: white;
 }
 
@@ -11,48 +11,26 @@ body {
 }
 
 .channellist{
-    background-color: #1eb8b2   ;
+    background-color: red;
 }
-
-
-::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: rgba(0,0,0,0.1);
-  }
-  ::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    background: rgba(0,0,0,0.2);
-  }
-  ::-webkit-scrollbar-thumb:hover{
-  	background: rgba(0,0,0,0.4);
-  }
-  ::-webkit-scrollbar-thumb:active{
-  	background: rgba(0,0,0,.9);
-  }
 #root {
     height: 100%;
 }
 
 .auth__form-container {
-    /* min-height: 100vh; */
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
 }
 
 .auth__form-container_fields {
     flex: 2;
     display: flex;
-    height: 800px;
-    width: 1000px;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+
     padding: 2rem;
-    background-image: url("loginBackground.png");
+    background: #005fff;
 }
 
 .auth__form-container_image {
@@ -70,29 +48,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width:500px;
+
     padding: 2rem;
     box-shadow: 0px 1px 5px rgb(0 0 0 / 10%);
     border-radius: 5px;
     transition: 0.8s ease;
-    background: linear-gradient(
-        to right bottom,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.2)
-    );
-    backdrop-filter: blur(0.2rem);
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    animation: superman-fly-right ease-in-out 0.9s forwards;
-}
-
-@keyframes superman-fly-right {
-    from {
-        transform: translateX(300vw);
-    }
-    to {
-        transform: translateX(0vw);
-    }
+    background: #fff;
 }
 
 .auth__form-container_fields-content p {
@@ -131,7 +92,7 @@ body {
 }
 
 .auth__form-container_fields-content_input input::placeholder {
-    color: #aeafae;
+    color: #b1b1b1;
     width: 100%;
     font-weight: unset;
     font-family: Arial, Helvetica, sans-serif;
@@ -175,7 +136,6 @@ body {
 
 .auth__form-container_fields-content_button button:hover {
     background: #0066ff;
-
 }
 
 .auth__form-container_fields-account {
@@ -216,7 +176,7 @@ body {
     .auth__form-container_image img {
         object-fit: cover;
     }
-}   
+}
 
 @media screen and (max-width: 375px) {
     .auth__form-container_fields {
@@ -235,9 +195,9 @@ body {
 .app__wrapper {
     display: flex;
     flex: 1;
-    height: 750px;
-    border-radius: 16px;
-    background-color:#e5fbf6;
+    /* height: 800px; */
+    height: 100%;
+    /* border-radius: 16px; */
     box-shadow: rgba(0, 0, 0, 0.33) 0px 1px 4px 0px;
 }
 
@@ -248,7 +208,7 @@ body {
 
 .str-chat-channel {
     height: 100%;
-    color:#1eb8b2   ;
+    color:red;
 }
 
 .str-chat__load-more-button {
@@ -264,7 +224,7 @@ body {
 }
 
 .str-chat__message-notification {
-    color: #1eb8b2  ;
+    color: red;
     cursor: pointer;
 }
 
